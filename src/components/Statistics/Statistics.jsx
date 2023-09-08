@@ -11,7 +11,7 @@ export const Statistics = ({ stats, title }) => {
   return (
     <section>
       {/* <StyledTitle> {stats ? 'Upload stats' : ''}</StyledTitle> */}
-      {stats && <StyledTitle>{title}</StyledTitle>}
+      {title && <StyledTitle>{title}</StyledTitle>}
       <StyledUl>
         {stats.map((item, idx) => (
           <ListItem $idx={idx} key={item.id}>
@@ -25,6 +25,7 @@ export const Statistics = ({ stats, title }) => {
 };
 
 Statistics.propTypes = {
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
