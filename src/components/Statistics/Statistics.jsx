@@ -1,17 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyledUl, StyledPercentage, ListItem } from './Statistic.styles';
+import {
+  StyledUl,
+  StyledPercentage,
+  ListItem,
+  StyledTitle,
+} from './Statistic.styles';
 
-export const Statistics = ({ stats }) => {
+export const Statistics = ({ stats, title }) => {
   return (
-    <StyledUl>
-      {stats.map((item, idx) => (
-        <ListItem $idx={idx} key={item.id}>
-          <span>{item.label}</span>
-          <StyledPercentage> {item.percentage}%</StyledPercentage>
-        </ListItem>
-      ))}
-    </StyledUl>
+    <section>
+      {/* <StyledTitle> {stats ? 'Upload stats' : ''}</StyledTitle> */}
+      {stats && <StyledTitle>{title}</StyledTitle>}
+      <StyledUl>
+        {stats.map((item, idx) => (
+          <ListItem $idx={idx} key={item.id}>
+            <span>{item.label}</span>
+            <StyledPercentage> {item.percentage}%</StyledPercentage>
+          </ListItem>
+        ))}
+      </StyledUl>
+    </section>
   );
 };
 

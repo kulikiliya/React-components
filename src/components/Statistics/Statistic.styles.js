@@ -8,7 +8,7 @@ function getRandomColor() {
 }
 
 export const StyledUl = styled.ul`
-  margin-top: 50px;
+  margin-top: 0;
   padding: 0;
   display: flex;
   flex-direction: row;
@@ -33,4 +33,14 @@ export const ListItem = styled.li`
 
   background-color: ${props => (props.$idx = getRandomColor())};
   text-align: center;
+`;
+
+export const StyledTitle = styled.h2`
+  margin-top: 35px;
+  margin-bottom: 0;
+  text-align: center;
+  border: 1px solid black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #9fddc2;
 `;

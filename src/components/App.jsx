@@ -22,14 +22,8 @@ export const App = () => {
     >
       <>
         <Profile message="hello" {...user} />
-      </>
-      <>
-        <Statistics stats={data} />
-      </>
-      <>
+        <Statistics stats={data} title="Upload stats" />
         <FriendsList friends={friends} />
-      </>
-      <>
         <TransactionHistory items={transactions} />
       </>
     </div>

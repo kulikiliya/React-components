@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  StyledTitle,
   StyledSpan,
   StyledWrapper,
   StyledUl,
@@ -12,7 +11,6 @@ import {
 export const FriendsList = ({ friends }) => {
   return (
     <StyledWrapper>
-      <StyledTitle>Upload stats</StyledTitle>
       <StyledUl>
         {friends.map(item => (
           <StyledList key={item.id}>
